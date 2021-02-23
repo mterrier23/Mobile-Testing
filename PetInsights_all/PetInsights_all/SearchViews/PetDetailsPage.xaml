@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.Search.PetDetailsPage"
+             BackgroundColor="white"
+             Title="{Binding Name}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <!--<ListView x:Name="CommentsView" ItemsSource="{Binding Comments}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding DisplayName}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>-->
+                <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
+                <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
+                <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
+                <Button Text="Add Comment" Clicked="BtnAddComment"/>
+                <Button Text="Update" Clicked="BtnUpdate_Pet"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
