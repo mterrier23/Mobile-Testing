@@ -33,5 +33,28 @@ namespace UITest1
 
             Assert.IsTrue(results.Any());
         }
+
+        [Test]
+        public void WelcomeTextIsDisplayed2()
+        {
+            app.WaitForElement(c => c.Marked("Add"));
+            app.Tap(c => c.Marked("Add"));
+            app.WaitForElement(c => c.Marked("Cancel"));
+            app.Tap(c => c.Marked("Cancel"));
+        }
+
+        [Test]
+        public void Enter_Creds_And_Tap_Ok()
+        {
+            app.EnterText(c => c.Marked("username"), "PaulP");
+            app.EnterText(c => c.Marked("password"), "test password");
+            app.DismissKeyboard();
+
+            app.Tap(c => c.Marked("loginButton"));
+
+            app.WaitForElement(c => c.Marked("Logged In"), "Timed out waiting for Logged In popup");
+
+            app.Tap(c => c.Marked("OK"));
+        }
     }
 }

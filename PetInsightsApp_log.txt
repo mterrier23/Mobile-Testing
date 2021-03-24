@@ -1,0 +1,262 @@
+  bash arg: -p
+  bash arg: com.companyname.petinsights_all
+  bash arg: -v
+  bash arg: 1000
+  bash arg: --pct-syskeys
+  bash arg: 0
+  bash arg: --throttle
+  bash arg: 500
+  bash arg: --ignore-crashes
+:Monkey: seed=1616677565763 count=1000
+:AllowPackage: com.companyname.petinsights_all
+:IncludeCategory: android.intent.category.LAUNCHER
+:IncludeCategory: android.intent.category.MONKEY
+// Event percentages:
+//   0: 15.0%
+//   1: 10.0%
+//   2: 2.0%
+//   3: 15.0%
+//   4: -0.0%
+//   5: -0.0%
+//   6: 25.0%
+//   7: 15.0%
+//   8: 2.0%
+//   9: 2.0%
+//   10: 1.0%
+//   11: 13.0%
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity } in package com.companyname.petinsights_all
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-1.0)
+:Sending Flip keyboardOpen=false
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Touch (ACTION_DOWN): 0:(629.0,249.0)
+:Sending Touch (ACTION_UP): 0:(633.3114,231.64871)
+:Sending Touch (ACTION_DOWN): 0:(282.0,613.0)
+:Sending Touch (ACTION_UP): 0:(282.33203,596.38794)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(997.0,588.0)
+:Sending Touch (ACTION_UP): 0:(1000.7166,585.4154)
+:Sending Touch (ACTION_DOWN): 0:(956.0,1257.0)
+:Sending Touch (ACTION_UP): 0:(977.3068,1266.2247)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(10.0,1971.0)
+:Sending Touch (ACTION_UP): 0:(0.924037,1970.8923)
+    //[calendar_time:2021-03-24 21:28:31.280  system_uptime:478452483]
+    // Sending event #100
+    //[calendar_time:2021-03-24 21:28:31.324  system_uptime:478452486]
+    // Sending event #100
+:Sending Touch (ACTION_DOWN): 0:(397.0,317.0)
+:Sending Touch (ACTION_UP): 0:(399.99152,322.30896)
+:Sending Touch (ACTION_DOWN): 0:(544.0,1026.0)
+:Sending Touch (ACTION_UP): 0:(569.68884,1023.75134)
+:Sending Touch (ACTION_DOWN): 0:(521.0,1938.0)
+:Sending Touch (ACTION_UP): 0:(519.829,1940.2081)
+:Sending Touch (ACTION_DOWN): 0:(937.0,445.0)
+:Sending Touch (ACTION_UP): 0:(993.15906,373.36688)
+:Sending Touch (ACTION_DOWN): 0:(312.0,700.0)
+:Sending Touch (ACTION_UP): 0:(278.50784,706.8264)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity } in package com.companyname.petinsights_all
+:Sending Touch (ACTION_DOWN): 0:(491.0,1888.0)
+:Sending Touch (ACTION_UP): 0:(463.3191,1878.1478)
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-3.0)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(965.0,1752.0)
+:Sending Touch (ACTION_UP): 0:(945.39703,1736.7803)
+:Sending Touch (ACTION_DOWN): 0:(970.0,378.0)
+:Sending Touch (ACTION_UP): 0:(970.88855,384.1986)
+    //[calendar_time:2021-03-24 21:28:31.975  system_uptime:478453137]
+    // Sending event #200
+    //[calendar_time:2021-03-24 21:28:31.976  system_uptime:478453138]
+    // Sending event #200
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(563.0,232.0)
+:Sending Touch (ACTION_UP): 0:(563.4761,236.212)
+:Sending Touch (ACTION_DOWN): 0:(727.0,1958.0)
+:Sending Touch (ACTION_UP): 0:(730.5059,2011.5259)
+:Sending Touch (ACTION_DOWN): 0:(4.0,1399.0)
+:Sending Touch (ACTION_UP): 0:(4.1504064,1380.8354)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(139.0,496.0)
+:Sending Touch (ACTION_UP): 0:(146.77145,491.76505)
+:Sending Touch (ACTION_DOWN): 0:(726.0,1402.0)
+:Sending Touch (ACTION_UP): 0:(726.4528,1399.3533)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(683.0,1949.0)
+:Sending Touch (ACTION_UP): 0:(717.4599,1916.0681)
+:Sending Touch (ACTION_DOWN): 0:(445.0,1172.0)
+:Sending Touch (ACTION_UP): 0:(447.83023,1163.1597)
+:Sending Touch (ACTION_DOWN): 0:(881.0,419.0)
+    //[calendar_time:2021-03-24 21:28:32.714  system_uptime:478453876]
+    // Sending event #300
+:Sending Touch (ACTION_UP): 0:(856.4057,293.59918)
+:Sending Touch (ACTION_DOWN): 0:(283.0,492.0)
+:Sending Touch (ACTION_UP): 0:(274.662,483.917)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-5.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,2.0)
+:Sending Touch (ACTION_DOWN): 0:(384.0,1436.0)
+:Sending Touch (ACTION_UP): 0:(386.80634,1436.0634)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,1.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,4.0)
+:Sending Trackball (ACTION_MOVE): 0:(1.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(243.0,1282.0)
+:Sending Touch (ACTION_UP): 0:(378.479,1374.6163)
+:Sending Flip keyboardOpen=true
+Got IOException performing flipjava.io.FileNotFoundException: /dev/input/event0: open failed: EACCES (Permission denied)
+    // Injection Failed
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-2.0)
+    //[calendar_time:2021-03-24 21:28:32.910  system_uptime:478454071]
+    // Sending event #400
+:Sending Touch (ACTION_DOWN): 0:(154.0,706.0)
+:Sending Touch (ACTION_UP): 0:(49.338985,699.31726)
+:Sending Touch (ACTION_DOWN): 0:(636.0,602.0)
+:Sending Touch (ACTION_UP): 0:(629.96844,589.7561)
+:Sending Touch (ACTION_DOWN): 0:(870.0,1715.0)
+:Sending Touch (ACTION_UP): 0:(868.57544,1718.9716)
+:Sending Touch (ACTION_DOWN): 0:(707.0,69.0)
+:Sending Touch (ACTION_UP): 0:(681.95447,69.0223)
+:Sending Touch (ACTION_DOWN): 0:(398.0,1845.0)
+:Sending Touch (ACTION_UP): 0:(414.20798,1851.4485)
+:Sending Touch (ACTION_DOWN): 0:(356.0,690.0)
+:Sending Touch (ACTION_UP): 0:(355.65338,694.9497)
+:Sending Touch (ACTION_DOWN): 0:(321.0,1140.0)
+:Sending Touch (ACTION_UP): 0:(323.33472,1140.0557)
+:Sending Touch (ACTION_DOWN): 0:(862.0,369.0)
+:Sending Touch (ACTION_UP): 0:(861.14014,363.8637)
+:Sending Touch (ACTION_DOWN): 0:(186.0,1949.0)
+:Sending Touch (ACTION_UP): 0:(186.04262,1947.4171)
+:Sending Touch (ACTION_DOWN): 0:(16.0,1221.0)
+:Sending Touch (ACTION_UP): 0:(35.62229,1219.5366)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,2.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-3.0)
+    //[calendar_time:2021-03-24 21:28:33.599  system_uptime:478454761]
+    // Sending event #500
+:Sending Touch (ACTION_DOWN): 0:(1004.0,392.0)
+:Sending Touch (ACTION_UP): 0:(1005.44073,405.62152)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(838.0,1349.0)
+:Sending Touch (ACTION_UP): 0:(848.22394,1340.118)
+:Sending Touch (ACTION_DOWN): 0:(62.0,1901.0)
+:Sending Touch (ACTION_UP): 0:(121.57364,1873.422)
+:Sending Touch (ACTION_DOWN): 0:(612.0,1376.0)
+:Sending Touch (ACTION_UP): 0:(592.77686,1327.7927)
+:Sending Touch (ACTION_DOWN): 0:(256.0,1609.0)
+:Sending Touch (ACTION_UP): 0:(279.6746,1622.5784)
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-1.0)
+:Sending Touch (ACTION_DOWN): 0:(852.0,1478.0)
+:Sending Touch (ACTION_UP): 0:(897.2267,1558.7045)
+:Sending Touch (ACTION_DOWN): 0:(749.0,1518.0)
+:Sending Touch (ACTION_UP): 0:(748.49994,1516.4756)
+    //[calendar_time:2021-03-24 21:28:33.962  system_uptime:478455124]
+    // Sending event #600
+    //[calendar_time:2021-03-24 21:28:33.963  system_uptime:478455125]
+    // Sending event #600
+:Sending Touch (ACTION_DOWN): 0:(765.0,207.0)
+:Sending Touch (ACTION_UP): 0:(746.69476,224.60117)
+:Sending Touch (ACTION_DOWN): 0:(313.0,301.0)
+:Sending Touch (ACTION_UP): 0:(371.42358,214.60846)
+:Sending Touch (ACTION_DOWN): 0:(307.0,361.0)
+:Sending Touch (ACTION_UP): 0:(378.06915,331.46558)
+:Sending Trackball (ACTION_MOVE): 0:(-2.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(6.0,1962.0)
+:Sending Touch (ACTION_UP): 0:(5.2377124,1976.5865)
+:Sending Touch (ACTION_DOWN): 0:(558.0,936.0)
+:Sending Touch (ACTION_UP): 0:(558.50903,934.396)
+:Sending Touch (ACTION_DOWN): 0:(410.0,1335.0)
+:Sending Touch (ACTION_UP): 0:(410.54886,1335.422)
+:Sending Touch (ACTION_DOWN): 0:(1012.0,1132.0)
+:Sending Touch (ACTION_UP): 0:(970.74896,1240.1508)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(677.0,1822.0)
+:Sending Touch (ACTION_UP): 0:(656.21075,1822.529)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,-2.0)
+:Sending Touch (ACTION_DOWN): 0:(727.0,25.0)
+:Sending Touch (ACTION_UP): 0:(735.39734,23.476099)
+    //[calendar_time:2021-03-24 21:28:34.396  system_uptime:478455558]
+    // Sending event #700
+:Sending Touch (ACTION_DOWN): 0:(113.0,772.0)
+:Sending Touch (ACTION_UP): 0:(114.72912,778.48175)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,3.0)
+:Sending Touch (ACTION_DOWN): 0:(996.0,468.0)
+:Sending Touch (ACTION_UP): 0:(1014.56104,466.3021)
+:Sending Touch (ACTION_DOWN): 0:(112.0,1801.0)
+:Sending Touch (ACTION_UP): 0:(57.803165,1838.8513)
+:Sending Touch (ACTION_DOWN): 0:(981.0,1266.0)
+:Sending Touch (ACTION_UP): 0:(999.36786,1265.6947)
+:Sending Trackball (ACTION_MOVE): 0:(0.0,-3.0)
+:Sending Touch (ACTION_DOWN): 0:(253.0,1797.0)
+:Sending Touch (ACTION_UP): 0:(248.56583,1797.5724)
+    // Rejecting start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.google.android.gm/.ConversationListActivityGmail } in package com.google.android.gm
+:Sending Touch (ACTION_DOWN): 0:(915.0,315.0)
+:Sending Touch (ACTION_UP): 0:(915.306,314.60092)
+    //[calendar_time:2021-03-24 21:28:35.134  system_uptime:478456296]
+    // Sending event #800
+:Sending Touch (ACTION_DOWN): 0:(808.0,2022.0)
+:Sending Touch (ACTION_UP): 0:(869.8608,2021.9504)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity } in package com.companyname.petinsights_all
+:Sending Trackball (ACTION_MOVE): 0:(-3.0,-4.0)
+:Sending Trackball (ACTION_MOVE): 0:(4.0,0.0)
+:Sending Trackball (ACTION_MOVE): 0:(3.0,3.0)
+:Sending Trackball (ACTION_UP): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(699.0,692.0)
+:Sending Touch (ACTION_UP): 0:(702.44904,679.9144)
+:Sending Touch (ACTION_DOWN): 0:(814.0,292.0)
+:Sending Touch (ACTION_UP): 0:(825.736,273.9837)
+:Sending Touch (ACTION_DOWN): 0:(634.0,1555.0)
+:Sending Touch (ACTION_UP): 0:(590.5655,1591.4235)
+:Sending Touch (ACTION_DOWN): 0:(388.0,1013.0)
+:Sending Touch (ACTION_UP): 0:(386.13803,1009.6604)
+:Sending Touch (ACTION_DOWN): 0:(405.0,1515.0)
+:Sending Touch (ACTION_UP): 0:(401.81863,1516.5264)
+:Sending Touch (ACTION_DOWN): 0:(856.0,1445.0)
+:Sending Touch (ACTION_UP): 0:(772.0666,1473.2878)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity } in package com.companyname.petinsights_all
+:Sending Touch (ACTION_DOWN): 0:(940.0,1624.0)
+:Sending Touch (ACTION_UP): 0:(939.73376,1629.5278)
+    // Rejecting start of Intent { cmp=com.microsoft.teams/com.microsoft.skype.teams.views.activities.ConversationThreadActivity } in package com.microsoft.teams
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,3.0)
+    // Rejecting start of Intent { cmp=com.microsoft.teams/com.microsoft.skype.teams.views.activities.ConversationThreadActivity } in package com.microsoft.teams
+    //[calendar_time:2021-03-24 21:28:35.390  system_uptime:478456552]
+    // Sending event #900
+:Sending Trackball (ACTION_MOVE): 0:(0.0,0.0)
+:Sending Touch (ACTION_DOWN): 0:(1001.0,1958.0)
+:Sending Touch (ACTION_UP): 0:(989.2629,1958.1373)
+:Sending Touch (ACTION_DOWN): 0:(748.0,1135.0)
+:Sending Touch (ACTION_UP): 0:(797.0832,1126.5204)
+:Switch: #Intent;action=android.intent.action.MAIN;category=android.intent.category.LAUNCHER;launchFlags=0x10200000;component=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity;end
+    // Allowing start of Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] cmp=com.companyname.petinsights_all/crc64981426c216e4e19e.SplashActivity } in package com.companyname.petinsights_all
+:Sending Touch (ACTION_DOWN): 0:(152.0,653.0)
+:Sending Touch (ACTION_UP): 0:(146.07156,653.0521)
+    // Rejecting start of Intent { act=com.facebook.orca.notify.SECURE_VIEW dat=fb-messenger://user/100006586774215 pkg=com.facebook.orca cmp=com.facebook.orca/com.facebook.messenger.intents.SecureIntentHandlerActivity } in package com.facebook.orca
+:Sending Trackball (ACTION_MOVE): 0:(2.0,-4.0)
+:Sending Touch (ACTION_DOWN): 0:(305.0,1294.0)
+:Sending Touch (ACTION_UP): 0:(311.98712,1298.9736)
+:Sending Touch (ACTION_DOWN): 0:(494.0,213.0)
+:Sending Touch (ACTION_UP): 0:(401.217,331.401)
+:Sending Trackball (ACTION_MOVE): 0:(-4.0,-2.0)
+:Sending Trackball (ACTION_MOVE): 0:(-1.0,-5.0)
+:Sending Touch (ACTION_DOWN): 0:(538.0,1329.0)
+:Sending Touch (ACTION_UP): 0:(538.8554,1332.1033)
+:Sending Touch (ACTION_DOWN): 0:(375.0,1815.0)
+:Sending Touch (ACTION_UP): 0:(393.37097,1810.9667)
+:Sending Touch (ACTION_DOWN): 0:(818.0,124.0)
+Events injected: 1000
+:Sending rotation degree=0, persist=false
+:Dropped: keys=0 pointers=0 trackballs=0 flips=2 rotations=0
+## Network stats: elapsed time=5302ms (0ms mobile, 0ms wifi, 5302ms not connected)
+// Monkey finished

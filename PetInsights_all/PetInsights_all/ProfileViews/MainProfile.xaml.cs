@@ -16,5 +16,9 @@ namespace PetInsights_all
         {
             InitializeComponent();
         }
+        async void LoginButton_clicked(object sender, EventArgs e)
+        {
+            await DisplayAlert("Login", "Logged In", "OK");
+        }
     }
 }
