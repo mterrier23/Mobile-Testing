@@ -11,16 +11,15 @@ namespace PetInsights_all
             //InitializeComponent(); // was here originally
 
             // If user previously used app, we skip location page
-            if (Application.Current.Properties["UserLocation"] == null)
+             if (Application.Current.Properties.ContainsKey("UserLocation"))
             {
-                MainPage = new NavigationPage(new GetLocation()); // previously was working fine
+                MainPage = new NavigationPage(new MainTabbed()); 
             }
             else
             {
-                MainPage = new NavigationPage(new MainTabbed()); // testing
+                MainPage = new NavigationPage(new GetLocation()); 
             }
-
-            // NOTE - test making MainTabbed the mainpage, and putting GetLocation modally on top
+            
         }
 
         protected override void OnStart()

@@ -16,9 +16,35 @@ namespace PetInsights_all.ViewModel
         public string Name { get; set; }
         public int Age { get; set; }
 
-        private DBFirebase services;
+        // testing if this allows changes !!
 
-        public Command AddPetCommand { get; }
+        private ObservableCollection<string> _media = new ObservableCollection<string>();
+
+        public ObservableCollection<string> Media
+        {
+            get { return _media; }
+            set
+            {
+                _media = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private ObservableCollection<Pet> _comments = new ObservableCollection<Pet>();
+
+        public ObservableCollection<Pet> Comments
+        {
+            get { return _comments; }
+            set
+            {
+                _comments = value;
+                OnPropertyChanged();
+            }
+        }
+
+
+
+        private DBFirebase services;
 
         private ObservableCollection<Pet> _pets = new ObservableCollection<Pet>();
 
@@ -35,18 +61,7 @@ namespace PetInsights_all.ViewModel
         public PetsViewModel()
         {
             services = new DBFirebase();
-            Pets = services.getPets(); // NOTE - change here
-            if (Pets != null)
-                Console.WriteLine("pets isn't null");
-            else Console.WriteLine("pets is null");
-            // NOTE - pets isn't null!
-            AddPetCommand = new Command(async () => await addPetAsync(ImgIcon, Name, Age));
-        }
-
-        // used to upload pets to database (NOTE - eventually change to upload comment and image!
-        public async Task addPetAsync(string ImgIcon, string Name, int Age)
-        {
-            await services.AddPetTask(Name, Age, ImgIcon);
+            Pets = services.getPets(); 
         }
     }
 }

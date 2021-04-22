@@ -16,7 +16,7 @@ namespace PetInsights_all
             InitializeComponent();
         }
 
-        // NOTE - not implemented:
+        // NOTE - only for Android Hardware button (not the software one)
         async void OnBackButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();

@@ -4,9 +4,9 @@
              x:Class="PetInsights_all.GetLocation">
     <ContentPage.Content>
         <StackLayout BackgroundColor="LightGray">
-            <Label TextColor="Black" Text="Enter your ZipCode" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
-            <Entry x:Name="location" BackgroundColor="Black"></Entry>
-            <Button Text="Find Pets" BackgroundColor="Blue" Clicked="FindPetsButton_OnClicked">
+            <Label TextColor="Black" Text="Enter your ZipCode" AutomationId="GetZipCode" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+            <Entry x:Name="location" AutomationId="EnterLocation" BackgroundColor="Black"></Entry>
+            <Button Text="Find Pets" BackgroundColor="Blue" AutomationId="FindPetsButton" Clicked="FindPetsButton_OnClicked">
             </Button>
             <Button Text="I'm an Org Rep" TextColor="Black" Clicked="GoToOrgSite"></Button>
         </StackLayout>

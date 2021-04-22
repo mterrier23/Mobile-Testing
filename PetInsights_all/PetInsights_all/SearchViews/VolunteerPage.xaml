@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.VolunteerPage"
+             BackgroundColor="White"
+             Title="How can I help?">
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*" />
+                    <ColumnDefinition Width=".5*" />
+                </Grid.ColumnDefinitions>
+                    <Button x:Name="volunteerButton" AutomationId="VolunteerButton" Grid.Column="0" BackgroundColor="Blue" Margin="0,0,-5,0"
+                        TextColor="White" 
+                        BorderColor="Blue"
+                        BorderWidth="1"
+                        Text="Volunteer"  BindingContext="volunteer"
+                        />
+                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="#ECECEC" Margin="-5,0,0,0"
+                        TextColor="ForestGreen" 
+                        BorderColor="LightGray"
+                        BorderWidth="1" 
+                        Text="Donate" BindingContext="donate"/>
+            </Grid>
+            <StackLayout Margin="20,0,20,20">
+            <Label Text="If under age of 18 please fill out the parental consent form on the shelter website" Padding="2" AutomationId="VolunteerLabel"
+                   Margin="10" FontAttributes="Italic" TextColor="DarkRed" FontSize="Small" HorizontalTextAlignment="Center" />
+
+              <!--ORG NAME-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Animal Friends Humane Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" ></Label>
+                    <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+            <Label Text="Assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" 
+                     TextColor="Black" FontSize="Small" Margin="10,0,10,0"/>
+            <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
+
+                    <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+
+
+            <!-- ORG NAME 2-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Best Friends Animal Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+            <Label Text="Playing with the pets, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" 
+                    TextColor="Black" FontSize="Small" Margin="10,0,10,0"/>
+
+                <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
+
+            <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+
+             <!--ORG NAME 3-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="The Ohio Pet" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                    <Label Text="Helping organize events at the shelter, assistance with walking the pets, cleaning the kennel, teaching basic behavior, interacting with the public" TextColor="Black"
+                           Margin="10,0,10,0" FontSize="Small"/>
+
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+            <BoxView Color="LightGray" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+            <!--ORG NAME 4-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Save the Animals Foundation" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                    <Label Text="Helping organize events at the shelter, assistance with taking care of the pets"
+                          Margin="10,0,10,0" TextColor="Black" FontSize="Small"/>
+
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+              <!-- ORG NAME 5-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Heartt Animal Refuge" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                    <Label Text="Helping cleaning the kennel, teaching basic behavior, interacting with the public"
+                           Margin="10,0,10,0" TextColor="Black" FontSize="Small"/>
+                 <Label Text="See more" FontAttributes="Italic"
+                     TextColor="Gray" FontSize="Small" Margin="10,0,10,0"/>
+
+                </StackLayout>
+            </StackLayout>
+            </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

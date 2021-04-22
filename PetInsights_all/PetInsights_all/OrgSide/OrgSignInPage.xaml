@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.OrgSide.OrgSignInPage"
+             Title="Sign In to Your Organization"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <StackLayout Margin="30, 80, 30, 0" VerticalOptions="StartAndExpand">
+            <Label Text="Organization Name" 
+                   Margin="0, 10, 0, 5"  
+                   FontSize="Large" 
+                   TextColor="Black" 
+                   FontAttributes="Bold">
+            </Label>
+            <Frame BorderColor="LightGray" HasShadow="False">
+            <Entry x:Name="orgName" Placeholder="Please enter your Organization's Name" 
+                   PlaceholderColor="LightGray" TextColor="Black" FontAttributes="Italic"
+                   HeightRequest="35" Margin="-20"/>
+            </Frame>
+            <Label Text="Access Code" 
+                   FontSize="Large" 
+                   TextColor="Black"
+                   FontAttributes="Bold"
+                   Margin="0,15,0,5">
+            </Label>
+            <Frame BorderColor="LightGray" HasShadow="False">
+                <Entry x:Name="accessCode" Placeholder="Please enter your access code" 
+                   PlaceholderColor="LightGray" TextColor="Black" FontAttributes="Italic"
+                   HeightRequest="35" Margin="-20"/>
+            </Frame>
+            <Button  x:Name="btnLogin"  Margin="20, 40, 20, 0"
+                     BackgroundColor="Orange" 
+                     TextColor="White" 
+                     BorderColor="Orange" 
+                     BorderWidth="2"  
+                     Text="Login" 
+                     Clicked="btnLogin_Clicked"></Button>
+            <Label Margin="0, 200, 0, 0" Text="Don't have your organization registered yet?" FontSize="Small" TextColor="LightGray" HorizontalOptions="Center"></Label>
+            <StackLayout>
+            <Button x:Name="btnRegister" Margin="20, 0, 20, 0" BackgroundColor="FloralWhite" BorderColor="Orange" BorderWidth="2" TextColor="Orange" Text="Register for Free"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

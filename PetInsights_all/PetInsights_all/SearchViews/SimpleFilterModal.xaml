@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.SimpleFilterModal"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Frame Padding="20"
+               Margin="20"
+               BackgroundColor="White">
+
+            <ScrollView>
+                <StackLayout>
+
+                    <Label Text="{Binding sliderText}"
+                           x:Name="sliderText"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
+                    <Label Text="Adjust search radius by moving the slider." AutomationId="FirstFilterLabel"
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Slider ThumbColor="Orange" 
+                             Maximum="40"
+                             Minimum="2"
+                            MaximumTrackColor="Gray" 
+                            MinimumTrackColor="Orange" 
+                            ValueChanged="OnSliderValueChanged" ></Slider>
+                    
+                    <Label Text="PET TYPE"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       Margin="0,10,0,0"
+                       FontSize="Medium"></Label>
+                    <Label Text="Select what animals you are interested in."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".3*" />
+                            <ColumnDefinition Width=".3*" />
+                            <ColumnDefinition Width=".3*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="dogButton" Grid.Column="0" Text="Dogs" BindingContext="dog" BorderWidth="1"  Clicked="PetTypeBtnClicked"
+                                BackgroundColor="{Binding dogBackgroundColor}" 
+                                TextColor="{Binding dogTextColor}" 
+                                BorderColor="{Binding dogBorderColor}"/>
+                        <Button x:Name="catButton" Grid.Column="1" Text="Cats" BindingContext="cat" BorderWidth="1"  Clicked="PetTypeBtnClicked"
+                                BackgroundColor="{Binding catBackgroundColor}" 
+                                TextColor="{Binding catTextColor}"
+                                BorderColor="{Binding catBorderColor}"/>
+                        <Button x:Name="exoticButton" Grid.Column="2" Text="Exotics" BindingContext="exotic" BorderWidth="1"  Clicked="PetTypeBtnClicked"
+                                BackgroundColor="{Binding exoticBackgroundColor}" 
+                                TextColor="{Binding exoticTextColor}"
+                                BorderColor="{Binding exoticBorderColor}"/>
+                    </Grid>
+                    <Label Text="GENDER"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
+                    <Label Text="Select what genders of pets you are interested in."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".3*" />
+                            <ColumnDefinition Width=".3*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="maleButton" Grid.Column="0" Text="Male" BindingContext="male" BorderWidth="1" Clicked="PetGenderBtnClicked"
+                                BackgroundColor="{Binding maleBackgroundColor}" 
+                                TextColor="{Binding maleTextColor}" 
+                                BorderColor="{Binding maleBorderColor}"/>
+                        <Button x:Name="femaleButton" Grid.Column="1" Text="Female" BindingContext="female" BorderWidth="1" Clicked="PetGenderBtnClicked"
+                                BackgroundColor="{Binding femaleBackgroundColor}" 
+                                TextColor="{Binding maleTextColor}"
+                                BorderColor="{Binding femaleBorderColor}"/>
+                    </Grid>
+                    <Label Text="AGE RANGE"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"
+                       Margin="0,10,0,0"></Label>
+                    <Label Text="Select what age range you are interested in."
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".25*" />
+                            <ColumnDefinition Width=".25*" />
+                            <ColumnDefinition Width=".25*" />
+                            <ColumnDefinition Width=".25*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="newbornButton" Grid.Column="0" Text="Newborn" BindingContext="newborn" BorderWidth="1" Clicked="PetAgeBtnClicked"
+                                BackgroundColor="{Binding newbornBackgroundColor}"  Padding="-10,0,-10,0"
+                                TextColor="{Binding newbornTextColor}" FontSize="12"
+                                BorderColor="{Binding newbornBorderColor}"/>
+                        <Button x:Name="youngButton" Grid.Column="1" Text="Young" BindingContext="young" BorderWidth="1" Clicked="PetAgeBtnClicked"
+                                BackgroundColor="{Binding youngBackgroundColor}" 
+                                TextColor="{Binding youngTextColor}" FontSize="12"
+                                BorderColor="{Binding youngBorderColor}"/>
+                        <Button x:Name="adultButton" Grid.Column="2" Text="Adult" BindingContext="adult" BorderWidth="1" Clicked="PetAgeBtnClicked"
+                                BackgroundColor="{Binding adultBackgroundColor}" 
+                                TextColor="{Binding adultTextColor}" FontSize="12"
+                                BorderColor="{Binding adultBorderColor}"/>
+                        <Button x:Name="seniorButton" Grid.Column="3" Text="Senior" BindingContext="senior" BorderWidth="1" Clicked="PetAgeBtnClicked"
+                                BackgroundColor="{Binding seniorBackgroundColor}" 
+                                TextColor="{Binding seniorTextColor}" FontSize="12"
+                                BorderColor="{Binding seniorBorderColor}"/>
+                    </Grid>
+                    <Label Text="LIFESTYLE"
+                       TextColor="Black"
+                        Margin="0,10,0,0"
+                       FontAttributes="Bold"
+                       FontSize="Medium"></Label>
+                    <Label Text="Select which temperment you are interested in"
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".33*" />
+                            <ColumnDefinition Width=".33*" />
+                        </Grid.ColumnDefinitions>
+                        <Button x:Name="calmButton" Grid.Column="0" Text="Calm" BindingContext="calm" BorderWidth="1" Clicked="PetTempermentBtnClicked"
+                                BackgroundColor="{Binding calmBackgroundColor}" 
+                                TextColor="{Binding calmTextColor}" 
+                                BorderColor="{Binding calmBorderColor}"/>
+                        <Button x:Name="energenicButton" Grid.Column="1" Text="Energetic" BindingContext="energenic" BorderWidth="1" Clicked="PetTempermentBtnClicked"
+                                BackgroundColor="{Binding energenicBackgroundColor}" 
+                                TextColor="{Binding energenicextColor}" 
+                                BorderColor="{Binding energenicBorderColor}"/>
+                    </Grid>
+                    <Label Text="KEYWORD SEARCH"
+                        Margin="0,10,0,0"
+                       TextColor="Black"
+                       FontAttributes="Bold"
+                       FontSize="Medium"></Label>
+                    <Label Text="Enter other keywords you would like to include"
+                       FontSize="Small"
+                       TextColor="LightSlateGray"></Label>
+                    <Frame BorderColor="LightGray" HasShadow="False">
+                        <Editor x:Name="keywordSearch" Placeholder="i.e. Hypoallergenic, blind, farm, etc." PlaceholderColor="LightGray"
+                            FontAttributes="Italic" TextColor="Black" HeightRequest="120" Margin="-20"></Editor>
+                    </Frame>
+                     <Button Text="search"
+                            AutomationId="FirstFilterButton"
+                        TextTransform="Uppercase"
+                        BackgroundColor="Orange"
+                        TextColor="White"
+                        Margin="0,20,0,0"
+                        Clicked="OnDismissButtonClicked"></Button>
+                </StackLayout>
+            </ScrollView>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

@@ -20,13 +20,16 @@ namespace PetInsights_all.SearchViews
             services = new DBFirebase();
             pet = _pet;
             InitializeComponent();
-            Intro.Text = "Leave a comment on your interaction with " + pet.Name;
+            Title = "Leave a comment for " + pet.Name;
+            Intro.Text = "How was your interaction with " + pet.Name+"?";
+            Comment.Placeholder = pet.Name + " was energetic, loved to play, scared of other dogs, ...";
         }
 
         public async void BtnPostComment(object sender, EventArgs e)
         {
             string comment = Comment.Text;
             await services.AddPetComment(pet, comment);
+            //await Application.Current.MainPage.Navigation.PopAsync(); // broke the nav bar maybe
             await Navigation.PopAsync();
         }
         

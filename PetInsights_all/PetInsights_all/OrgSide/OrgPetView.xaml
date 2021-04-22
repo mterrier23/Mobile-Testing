@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.OrgSide.OrgPetView"
+             Title="Cincinnati SAAP Pets"
+             BackgroundColor="LightBlue">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid HeightRequest="120">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width=".5*"/>
+                    <ColumnDefinition Width=".5*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Margin="10, 20, -5, 20" x:Name="btnAddPet" BackgroundColor="Orange" TextColor="White" 
+                    BorderColor="Orange" BorderWidth="2"  Text="Add Pet" Clicked="btnAddPet_clicked"></Button>
+                <Button Grid.Column="1" Margin="5, 20, 10, 20" x:Name="btnEdit" BackgroundColor="Orange" TextColor="White" 
+                    BorderColor="Orange" BorderWidth="2"  Text="Edit Information"></Button>
+
+            </Grid>
+        <CollectionView Margin="10,0,10,10" ItemsSource="{Binding Pets}"
+                    x:Name="lstPets"
+                    ItemSizingStrategy="MeasureAllItems"
+                    SelectionMode="Single"
+                    SelectionChanged="lstPets_SelectionChanged">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical"
+                             Span="2"                             
+                             VerticalItemSpacing="10"
+                             HorizontalItemSpacing="10">
+            </GridItemsLayout>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+
+                    <Frame Padding="15"
+                           Margin="10"
+                           CornerRadius="5"
+                           BorderColor="LightBlue">
+                                         
+           <StackLayout>
+               <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill" BackgroundColor="LightGray"></Image>
+               <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Name}"
+                     HorizontalOptions="StartAndExpand"
+                     FontSize="24"
+                     TextColor="Black"
+                     VerticalTextAlignment="End"
+                     FontAttributes="Bold"></Label>
+                                </StackLayout>
+              <StackLayout Orientation="Horizontal">
+               <Label Text="{Binding Breed}"
+                      HorizontalOptions="StartAndExpand"
+                      TextColor="Black"
+                      FontSize="Small"></Label>
+
+                
+              <!-- Gender ICON
+                  <Image Source="femaleicon.png"
+                     HeightRequest="18"
+                     ></Image>-->
+              </StackLayout>
+
+               <Label Text="{Binding Age, StringFormat='Age: {0:F0}'}"
+                       TextColor="Black"
+                       FontSize="Small"></Label>
+           </StackLayout>
+
+       </Frame>    
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+
+
+    </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

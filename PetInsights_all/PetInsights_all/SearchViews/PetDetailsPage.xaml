@@ -3,22 +3,144 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PetInsights_all.Search.PetDetailsPage"
              BackgroundColor="white"
+             AutomationId="PetDetailsPageId"
              Title="{Binding Name}">
     <ContentPage.Content>
         <ScrollView>
-            <StackLayout>
-                <!--<ListView x:Name="CommentsView" ItemsSource="{Binding Comments}">
+            <StackLayout Margin="25">
+                <CarouselView x:Name="TheCarousel" ItemsSource="{Binding Media}" IndicatorView="indicatorView"
+                              HeightRequest="400" BackgroundColor="White">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            
+                            <Image Source="{Binding .}" Aspect="AspectFill"/>
+                              
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView x:Name="indicatorView"
+                   IndicatorColor="LightBlue"
+                   SelectedIndicatorColor="Orange"
+                   IndicatorSize="7" 
+                   HorizontalOptions="Center"
+                   Margin="0,5,0,20"/>
+                <Grid Margin="0,5,0,5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".10*" />
+                        <ColumnDefinition Width=".10*" />
+                    </Grid.ColumnDefinitions>
+                    <Label  Grid.Column="0" Text="{Binding Name}" FontAttributes="Bold" AutomationId="PetNameId"
+                            FontSize="Title" TextColor="Black"></Label>
+                    <ImageButton x:Name= "sharePet" Grid.Column="1" Source="ic_share.png" HeightRequest="18" BackgroundColor="White" />
+                    <Image x:Name="faveImage" Grid.Column="2" Source="{Binding favImage}">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnFavoritesTapped"
+                                NumberOfTapsRequired="1" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                </Grid>
+                
+                <Grid  Padding="0,0,0,20">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".3*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Label  Grid.Row="0" Grid.Column="0" Text="Breed: " 
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="0" Grid.Column="1" Text="{Binding Breed}"
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="0" Text="Age: "
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="1" Grid.Column="1" Text="{Binding Age}"
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="2" Grid.Column="0" Text="Sex: "
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="2" Grid.Column="1" Text="{Binding Sex}"
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="3" Grid.Column="0" Text="Location: "
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                    <Label  Grid.Row="3" Grid.Column="1" Text="{Binding Affiliation}"
+                            FontSize="Medium" TextColor="Black" HorizontalOptions="StartAndExpand"></Label>
+                </Grid>
+                <Grid BackgroundColor="White">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2" />
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="2"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Grid.Column="0" Text="Comment"  Clicked="BtnAddComment"></Button>
+                    <!--<Label Grid.Column="1" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
+                    <Button BackgroundColor="Orange" TextColor="White" BorderColor="Orange" BorderWidth="2"  Grid.Column="2" Text="Add Photo" Clicked="BtnAddMedia"></Button>
+                    <!--<Label Grid.Column="3" Text="|" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"></Label>-->
+                    <Button BackgroundColor="Orange" BorderColor="Orange" BorderWidth="2" TextColor="White" Text="Favorite" Clicked="BtnUpdate_Pet" Grid.Column="4"></Button>
+
+                    <!--<Button CornerRadius="5" BackgroundColor="LightBlue"  Text="Favorite" />-->
+                </Grid>
+
+                <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+                                         
+                <Label Text="Comments" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalOptions="Start" Margin="0,10,0,0"></Label>
+                <Label x:Name="hasNoComments" Text="This pet has no comments yet" TextColor="Black" IsVisible="{Binding ifHasComments}"></Label>
+                <StackLayout VerticalOptions="Fill" HorizontalOptions="StartAndExpand">
+                <ListView x:Name="lstComments" ItemsSource="{Binding Comments}" IsVisible="{Binding showComments}" 
+                  SeparatorVisibility="Default" IsEnabled = "true" VerticalOptions="FillAndExpand" RowHeight="60">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextCell Text="{Binding DisplayName}" />
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding .}" Padding="0,10,0,10" TextColor="Black"/>
+                                   
+                                </StackLayout>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
-                </ListView>-->
-                <Image x:Name="ImgIcon" Source="{Binding ImgIcon}"/>
-                <Entry x:Name="Name" Text="{Binding Name}" IsReadOnly="True" BackgroundColor="Gray"/>
-                <Entry x:Name="Age" Text="{Binding Age}" IsReadOnly="False" BackgroundColor="Gray"/>
-                <Button Text="Add Comment" Clicked="BtnAddComment"/>
-                <Button Text="Update" Clicked="BtnUpdate_Pet"/>
+                </ListView>
+                </StackLayout>
+                <Button x:Name="SeeComments" IsVisible="{Binding isVisibleBtn}" Padding="0"  HorizontalOptions="StartAndExpand" TextColor="Orange" Text="See All Comments" Clicked="BtnSeeComments" BackgroundColor="White"/>
+                <BoxView HeightRequest="1" BackgroundColor="LightBlue" Margin="0,10,0,0"/>
+
+                <Label x:Name="shelteredWithLabel" TextColor="Black" FontSize="Medium" FontAttributes="Italic" Margin="0,20,0,20"></Label>
+                <CollectionView Grid.Column="0" ItemsSource="{Binding SharedPets}"
+                    x:Name="lstSharedPets"
+                    SelectionMode="Single"
+                    SelectionChanged="lstPets_SelectionChanged">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Vertical" Span="2" VerticalItemSpacing="10" HorizontalItemSpacing="10"></GridItemsLayout>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Frame Padding="15" Margin="10" HasShadow="True" CornerRadius="5" BackgroundColor="White" BorderColor="LightBlue">
+                                    <StackLayout VerticalOptions="Fill">
+                                        <Image HeightRequest="120" Source="{Binding ImgIcon}" Aspect="AspectFill"></Image>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition />
+                                            <ColumnDefinition />
+                                        </Grid.ColumnDefinitions>
+                                        <Label Grid.Column="0" Text="{Binding Name}" FontSize="Medium" VerticalTextAlignment="End" TextColor="Black"
+                                                FontAttributes="Bold"></Label>
+                                        <Label Grid.Column="1" Text="{Binding Age, StringFormat='Age {0:F0}'}" VerticalTextAlignment="End" HorizontalTextAlignment="End" TextColor="Black" FontSize="Small"></Label>
+                                    </Grid>
+                                </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                 <BoxView HeightRequest="3" BackgroundColor="LightBlue" Margin="0,20,0,0"/>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

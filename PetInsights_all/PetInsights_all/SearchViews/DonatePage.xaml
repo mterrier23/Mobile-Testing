@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PetInsights_all.SearchViews.DonatePage"
+             BackgroundColor="White"
+             Title="How Can I Help?">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".5*" />
+                        <ColumnDefinition Width=".5*" />
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="volunteerButton" AutomationId="DonatePageBtn" Grid.Column="0" BackgroundColor="White" Margin="0,0,-5,0"
+                            TextColor="Blue" 
+                            BorderColor="Gray"
+                            BorderWidth="1"
+                            Text="Volunteer"  BindingContext="volunteer"/>
+                    <Button x:Name="donateButton" Grid.Column="1" BackgroundColor="ForestGreen" Margin="-5,0,0,0"
+                            TextColor="White" 
+                            BorderColor="ForestGreen"
+                            BorderWidth="1" 
+                            Text="Donate"  BindingContext="donate"/>
+                </Grid>
+
+                <StackLayout Margin="20,0,20,20">
+           
+              <!--ORG NAME-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Animal Friends Humane Society" AutomationId="DonatePageLabel" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation" Margin="0,10,0,0" ></Label>
+                        <Label Grid.Column="1" Text="1.2 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center" Margin="0,10,0,0" />
+                </Grid>
+            
+         
+                <FlexLayout Direction="Row" Wrap="Wrap" Padding="0">
+                    
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30">
+                        <Label Text="Toys" CharacterSpacing="0"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Purine Soft Puppy Food"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                         <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Towels"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Lint Roller"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Kitty Soft Food"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                </FlexLayout>
+
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+           
+             <!-- ORG NAME 2-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Best Friends Animal Society" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="3.5 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+          <FlexLayout Direction="Row" Wrap="Wrap" Padding="0">
+                        <Frame BackgroundColor="#ECECEC" BorderColor="#ECECEC" CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Paper Towels"  FontSize="15"  TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30">
+                        <Label Text="Heavy Duty Garbage Bags" CharacterSpacing="0"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Brooms"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Dust Pans"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Sponges"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Liquid Laundry Detergent"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Bleach"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Dusters"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Kitty Wet Food"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                </FlexLayout>
+
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+               <!--ORG NAME 3-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="The Ohio Pet" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="9.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+                <FlexLayout Direction="Row" Wrap="Wrap" Padding="0">
+                        <Frame BackgroundColor="#ECECEC" BorderColor="#ECECEC" CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Cleaning Suplies"  FontSize="15"  TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                   
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Laundry Detergent"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Bleach"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Dusters"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Lint Roller"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    
+                </FlexLayout>
+
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+
+
+             <!--ORG NAME 4-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Save the Animals Foundation" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="15.4 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+
+  <FlexLayout Direction="Row" Wrap="Wrap" Padding="0">
+                        <Frame BackgroundColor="#ECECEC" BorderColor="#ECECEC" CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Blankets"  FontSize="15"  TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30">
+                        <Label Text="Washcloths" CharacterSpacing="0"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Hand Towels"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Lysol Spray"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Gently Used Towels"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Sheets"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Pillowcases"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    
+                </FlexLayout>
+
+                        <BoxView Color="LightGray" CornerRadius="10" HeightRequest="1" Margin = "-20,10,-20,10" />
+            <!-- ORG NAME 5-->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width=".8*" />
+                        <ColumnDefinition Width=".2*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Text="Heartt Animal Refuge" FontAttributes="Bold" TextColor="Black" FontSize="Medium" LineBreakMode="TailTruncation"></Label>
+                    <Label Grid.Column="1" Text="22.3 miles" TextColor="DarkGray" FontSize="Small" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                </Grid>
+<FlexLayout Direction="Row" Wrap="Wrap" Padding="0">
+                    <Frame BackgroundColor="#ECECEC" BorderColor="#ECECEC" CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Dish Soap"  FontSize="15"  TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30">
+                        <Label Text="Treats" CharacterSpacing="0"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"   CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Office Supplies"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                        <Label Text="Leashes, Collars, And Harnesses"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                         <Label Text="Clorox Wipes"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Towels"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Lint Roller"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center"/>
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Puppy Pads"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                    <Frame BackgroundColor="#ECECEC"  CornerRadius="10" Margin="2" Padding="5,0,5,0" HeightRequest="30" >
+                            <Label Text="Gift Certificates"  FontSize="15" TextColor="Black" VerticalTextAlignment="Center" />
+                    </Frame>
+                </FlexLayout>
+                </StackLayout>
+            </StackLayout>
+                </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

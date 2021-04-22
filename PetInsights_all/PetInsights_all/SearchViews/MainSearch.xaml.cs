@@ -18,7 +18,18 @@ namespace PetInsights_all
         public MainSearch()
         {
             InitializeComponent();
+            searchFrame.BackgroundColor = Color.White;
             location.Text = Application.Current.Properties["UserLocation"].ToString();
+            transparentColor0.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor1.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor2.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor3.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor4.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor5.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor6.BackgroundColor = new Color(1, 1, 1, 0.7);
+            transparentColor7.BackgroundColor = new Color(1, 1, 1, 0.7);
+
+            // = "Current Location = Application.Current.Properties["UserLocation"].ToString();
         }
 
         // code already exists in GetLocation.xaml.cs
@@ -52,22 +63,52 @@ namespace PetInsights_all
             Application.Current.SavePropertiesAsync();
         }
 
-        async void PetMapButton_OnClicked(object sender, EventArgs e)
+  
+        async void GoToOrgSite(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new PetMapView()); 
+            await Application.Current.MainPage.Navigation.PushAsync(new OrgSignInPage());
         }
 
-        async void PetListButton_OnClicked(object sender, EventArgs e)
+        async void GoToVolunteer(object sender, EventArgs e)
         {
-            // await Navigation.PushAsync(new PetListView()); 
-            await Navigation.PushAsync(new templist());
+            Console.WriteLine("clicked go to volunteer");
+            await Application.Current.MainPage.Navigation.PushAsync(new VolunteerPage());
         }
 
-        async void AddPetButton_OnClicked(object sender, EventArgs e)
+        async void GoToDonate(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AddPet()); 
+            await Application.Current.MainPage.Navigation.PushAsync(new DonatePage());
         }
 
+        async void GoToOrgListView(object sender, EventArgs e)
+        {
+            //await Application.Current.MainPage.Navigation.PushAsync(new OrgListView()); // possibly broke nav bar
+            await Navigation.PushAsync(new OrgListView());
 
+        }
+
+        async void onSearchFrame_Tapped(object sender, EventArgs e)
+        {
+            // await Navigation.PushModalAsync(new SimpleFilterModal());
+            
+            //await Application.Current.MainPage.Navigation.PushAsync(new PetListView(null, true));
+            // temporary fix :)
+            searchFrame.BackgroundColor = Color.LightGray;
+            await Task.Delay(500);
+            await Navigation.PushAsync(new PetListView(null, true));
+            searchFrame.BackgroundColor = Color.White;
+        }
+
+        async void onLocationFrame_Tapped(object sender, EventArgs e)
+        {
+            // let user change location (not implementing for demo
+        }
+
+        async void onQuickSearchTapped(object sender, EventArgs e)
+        {
+            string _quickFilter = (sender as Frame).BindingContext as string;
+            Console.WriteLine("in here");
+            await Navigation.PushAsync(new PetListView(_quickFilter));
+        }
     }
 }
